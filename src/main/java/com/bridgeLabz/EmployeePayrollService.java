@@ -1,7 +1,9 @@
 package com.bridgeLabz;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class EmployeePayrollService {
@@ -58,11 +60,17 @@ public class EmployeePayrollService {
 
     private EmployeePayrollData getEmployeePayrollData(String name) {
         return this.employeePayrollList.stream()
-                    .filter(employeePayrollDataItem -> employeePayrollDataItem.name.equals(name))
-                    .findFirst()
-                    .orElse(null);
+                .filter(employeePayrollDataItem -> employeePayrollDataItem.name.equals(name))
+                .findFirst()
+                .orElse(null);
     }
 
+    //UC5
+    public List<EmployeePayrollData> readEmployeePayrollForDataRange(IOService ioService, LocalDate startDate, LocalDate endDate) {
+        if(ioService.equals(IOService.DB_IO))
+            return employeePayrollDBService.getEmployeePayrollForDateRange(startDate, endDate);
+        return null;
+    }
     public void writeEmployeePayrollData(IOService ioService){
         if(ioService.equals(IOService.CONSOLE_IO)) {
             System.out.println("\nWriting Employee Payroll Roaster to Console\n" +employeePayrollList);
@@ -71,6 +79,12 @@ public class EmployeePayrollService {
         }
     }
 
+    //UC6 Find Average salary by gender
+    public Map<String, Double> readAverageSalaryByGender(IOService ioService) {
+        if(ioService.equals(IOService.DB_IO))
+            return employeePayrollDBService.getEmployeeAverageSalaryByGender();
+        return null;
+    }
     public void printData(IOService ioService) {
         if(ioService.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();

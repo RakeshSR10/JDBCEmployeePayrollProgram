@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-09T18:15:42" hostname="RAKESH" time="0.421">
+<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-09T19:32:06" hostname="RAKESH" time="0.38">
   <properties/>
-  <testcase name="giveNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDB()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="0.421"/>
+  <testcase name="givenPayrollData_WhenAverageSalaryRetrievedByGender_ShouldReturnProperValue()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="0.38"/>
   <system-out><![CDATA[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@3fb632a9
+Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@52c511aa
 Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@49f48be0
-Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@12aa8c67
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
