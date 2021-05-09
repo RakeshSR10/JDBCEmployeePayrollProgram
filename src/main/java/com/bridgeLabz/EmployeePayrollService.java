@@ -89,6 +89,12 @@ public class EmployeePayrollService {
             new EmployeePayrollFileIOService().printData();
     }
 
+    //UC7 Add new Employee to DB table
+    public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
+        employeePayrollList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
+    }
+
+
     public long countEntries(IOService ioService) {
         if(ioService.equals(IOService.FILE_IO))
             return new EmployeePayrollFileIOService().countEntries();

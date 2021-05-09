@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-09T18:56:52" hostname="RAKESH" time="0.401">
+<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-09T20:14:55" hostname="RAKESH" time="0.525">
   <properties/>
-  <testcase name="givenDataRange_When_Retrieved_ShouldMatchEmployeeCount()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="0.401"/>
+  <testcase name="givenNewEmployee_WhenAdded_ShouldSyncWithDB()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="0.525"/>
   <system-out><![CDATA[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@58337865
+Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@1019e41d
 Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@2bcb8e18
+Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@63e9c44b
+Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@4d4fdf54
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
