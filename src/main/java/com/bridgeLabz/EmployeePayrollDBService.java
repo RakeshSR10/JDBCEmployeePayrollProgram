@@ -1,9 +1,10 @@
 package com.bridgeLabz;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class EmployeePayrollDBService {
     private PreparedStatement employeePayrollDataStatement;
@@ -94,10 +95,27 @@ public class EmployeePayrollDBService {
     //UC5 retrieve date in the range
     public List<EmployeePayrollData> getEmployeePayrollForDateRange(LocalDate startDate, LocalDate endDate) {
         String sql = String.format("SELECT * FROM employee_payroll WHERE START BETWEEN '%s' AND '%s' ;",
-                     Date.valueOf(startDate), Date.valueOf(endDate));
+                Date.valueOf(startDate), Date.valueOf(endDate));
         return this.getEmployeePayrollDataUsingDB(sql);
     }
 
+    //UC 6 Average salary by Gender
+    public Map<String, Double> getEmployeeAverageSalaryByGender() {
+        String sql = "SELECT gender, AVG(salary) as avg_salary FROM employee_payroll GROUP BY gender;";
+        Map<String, Double> genderToAverageSalaryMap = new HashMap<>();
+        try (Connection connection = this.getConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while(resultSet.next()) {
+                String gender = resultSet.getString("gender");
+                double salary = resultSet.getDouble("avg_salary");
+                genderToAverageSalaryMap.put(gender, salary);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return genderToAverageSalaryMap;
+    }
     private List<EmployeePayrollData> getEmployeePayrollDataUsingDB(String sql) {
         List<EmployeePayrollData> employeePayrollList = new ArrayList<>();
         try(Connection connection = this.getConnection()) {
@@ -110,3 +128,4 @@ public class EmployeePayrollDBService {
         return employeePayrollList;
     }
 }
+
