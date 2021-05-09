@@ -63,6 +63,7 @@ public class EmployeePayrollServiceTest {
                 averageSalaryByGender.get("F").equals(3000000.00));
     }
     //UC7 -Ability to add a new Employee to the Payroll.
+    //UC8 Adding Employee payroll details.
     @Test
     public void givenNewEmployee_WhenAdded_ShouldSyncWithDB() {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
