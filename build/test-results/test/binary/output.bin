@@ -1,28 +1,54 @@
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@5d18ef5a
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@3ce35b9b
 #Employee being Added = Jeff Bezos
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@62b074e9
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@3ceb4c58
 Employee Added -> Jeff Bezos
 #Employee being Added = Bill Gates
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@1cce48bb
+JConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@e9d933f
 Employee Added -> Bill Gates
 (Employee being Added = Mark Zuckerberg
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@13b39cb2
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@33ea5659
 #Employee Added -> Mark Zuckerberg
 Employee being Added = Sunder
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@5d1357d1
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@1a9201ee
 Employee Added -> Sunder
 Employee being Added = Mukesh
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@2b543001
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@41431d72
 Employee Added -> Mukesh
 Employee being Added = Anil
 [Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@13147b08
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@48d90812
 Employee Added -> Anil
-Ë[Emp ID:4, Emp name:Mark, Salary:5000000.0, Emp ID:5, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:6, Emp name:Bill Gates, Salary:2000000.0, Emp ID:7, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:8, Emp name:Sunder, Salary:6000000.0, Emp ID:9, Emp name:Mukesh, Salary:1000000.0, Emp ID:10, Emp name:Anil, Salary:2000000.0]
-(Duration without Thread = PT1.7355089S
+Ð[Emp ID:4, Emp name:Mark, Salary:5000000.0, Emp ID:47, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:48, Emp name:Bill Gates, Salary:2000000.0, Emp ID:49, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:50, Emp name:Sunder, Salary:6000000.0, Emp ID:51, Emp name:Mukesh, Salary:1000000.0, Emp ID:52, Emp name:Anil, Salary:2000000.0]
+)Duration without Thread = PT19.5850638S
+#Employee being Added = Jeff Bezos
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+#Employee being Added = Bill Gates
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@57784339
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@6ae0948f
+Employee being Added = Sunder
+(Employee being Added = Mark Zuckerberg
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Employee being Added = Mukesh
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@5b5a0e1f
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@6bc4262d
+Employee being Added = Anil
+[Connecting to database...!!!!    jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@2d8a113b
+KConnection is Successfull.....!   com.mysql.jdbc.JDBC4Connection@484cdf1c
+Employee Added -> Jeff Bezos
+#Employee Added -> Mark Zuckerberg
+Employee Added -> Bill Gates
+Employee Added -> Sunder
+Employee Added -> Mukesh
+Employee Added -> Anil
+Ÿ[Emp ID:0, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:0, Emp name:Bill Gates, Salary:2000000.0, Emp ID:0, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:0, Emp name:Sunder, Salary:6000000.0, Emp ID:0, Emp name:Mukesh, Salary:1000000.0, Emp ID:0, Emp name:Anil, Salary:2000000.0]
+&Duration with Thread = PT11.8809527S
