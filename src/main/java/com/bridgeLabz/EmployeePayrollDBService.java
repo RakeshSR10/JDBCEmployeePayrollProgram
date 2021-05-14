@@ -22,7 +22,8 @@ public class EmployeePayrollDBService {
     }
 
     //Establish connection
-    private Connection getConnection() throws SQLException {
+    //Thread synchronization for order wise execution
+    private synchronized Connection getConnection() throws SQLException {
         connectionCounter++;
         String jdbcURL = "jdbc:mysql://localhost:3306/payroll_service?useSSL=false";
         String userName = "root";
