@@ -28,8 +28,7 @@ public class EmployeePayrollDBService {
         String userName = "root";
         String password = "1234";
         Connection connection;
-
-     //UC3 - Thread Execution
+        //UC3 - Thread Execution
         System.out.println("Processing Thread :"+Thread.currentThread().getName()+
                            "Connecting to database with Id --> "+jdbcURL);
         connection = DriverManager.getConnection(jdbcURL, userName, password);

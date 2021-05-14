@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-14T19:22:25" hostname="RAKESH" time="2.734">
+<testsuite name="com.bridgaLabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-14T19:32:39" hostname="RAKESH" time="1.803">
   <properties/>
-  <testcase name="given6Employee_WhenAddedToDB_ShouldMatchEmployeeEntries()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="2.734">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;13&gt; but was: &lt;11&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;13&gt; but was: &lt;11&gt;
+  <testcase name="given6Employee_WhenAddedToDB_ShouldMatchEmployeeEntries()" classname="com.bridgaLabz.EmployeePayrollServiceTest" time="1.803">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;13&gt; but was: &lt;7&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;13&gt; but was: &lt;7&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
@@ -125,34 +125,24 @@ Employee being Added = Anil
 Processing Thread :Test workerConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Processing Thread :Test worker Id: 7Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@328fe687
 Employee Added -> Anil
-[Emp ID:4, Emp name:Mark, Salary:5000000.0, Emp ID:59, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:60, Emp name:Bill Gates, Salary:2000000.0, Emp ID:61, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:62, Emp name:Sunder, Salary:6000000.0, Emp ID:63, Emp name:Mukesh, Salary:1000000.0, Emp ID:64, Emp name:Anil, Salary:2000000.0]
-Duration without Thread = PT1.515407S
-Employee being Added = Jeff Bezos
+[Emp ID:4, Emp name:Mark, Salary:5000000.0, Emp ID:71, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:72, Emp name:Bill Gates, Salary:2000000.0, Emp ID:73, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:74, Emp name:Sunder, Salary:6000000.0, Emp ID:75, Emp name:Mukesh, Salary:1000000.0, Emp ID:76, Emp name:Anil, Salary:2000000.0]
+Duration without Thread = PT1.3513748S
+[Emp ID:0, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:0, Emp name:Bill Gates, Salary:2000000.0, Emp ID:0, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:0, Emp name:Sunder, Salary:6000000.0, Emp ID:0, Emp name:Mukesh, Salary:1000000.0, Emp ID:0, Emp name:Anil, Salary:2000000.0]
+Duration with Thread = PT0.0069833S
 Employee being Added = Bill Gates
-Processing Thread :Bill GatesConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Processing Thread :Jeff BezosConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Employee being Added = Mark Zuckerberg
+Processing Thread :Bill GatesConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Processing Thread :Mark ZuckerbergConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Processing Thread :Bill Gates Id: 10Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@22747f09
-Processing Thread :Mark Zuckerberg Id: 10Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@6592fefa
+Processing Thread :Bill Gates Id: 9Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@615c692
+Processing Thread :Mark Zuckerberg Id: 9Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@1dc93be2
+Employee being Added = Jeff Bezos
+Processing Thread :Jeff BezosConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Employee being Added = Sunder
 Processing Thread :SunderConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Processing Thread :Sunder Id: 11Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@79bf35bc
-Processing Thread :Jeff Bezos Id: 11Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@2a6126da
 Employee being Added = Mukesh
 Processing Thread :MukeshConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Employee being Added = Anil
-Processing Thread :AnilConnecting to database with Id --> jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Processing Thread :Anil Id: 13Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@7836838a
-Processing Thread :Mukesh Id: 13Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@51bb6a2c
-Employee Added -> Anil
-Employee Added -> Bill Gates
-Employee Added -> Sunder
-Employee Added -> Mark Zuckerberg
-Employee Added -> Jeff Bezos
-Employee Added -> Mukesh
-[Emp ID:0, Emp name:Jeff Bezos, Salary:1000000.0, Emp ID:0, Emp name:Bill Gates, Salary:2000000.0, Emp ID:0, Emp name:Mark Zuckerberg, Salary:3000000.0, Emp ID:0, Emp name:Sunder, Salary:6000000.0, Emp ID:0, Emp name:Mukesh, Salary:1000000.0, Emp ID:0, Emp name:Anil, Salary:2000000.0]
-Duration with Thread = PT0.8296536S
+Processing Thread :Jeff Bezos Id: 12Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@2a6126da
+Processing Thread :Mukesh Id: 12Connection is Successfull.....!com.mysql.jdbc.JDBC4Connection@51bb6a2c
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
