@@ -4,6 +4,8 @@ import com.bridgeLabz.EmployeePayrollService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -72,5 +74,23 @@ public class EmployeePayrollServiceTest {
         boolean result = employeePayrollService.checkEmployeePayrollInSyncWithDB("Mark");
         Assertions.assertTrue(result);
     }
+    //UC1 - Multi-Threading, Ability to add Multiple record using Thread
+    @Test
+    public void given6Employee_WhenAddedToDB_ShouldMatchEmployeeEntries() {
+        EmployeePayrollData[] arrayOfEmps = {
+                new EmployeePayrollData(0,"Jeff Bezos", "M", 1000000.00,LocalDate.now()),
+                new EmployeePayrollData(0,"Bill Gates", "M",2000000.00,LocalDate.now()),
+                new EmployeePayrollData(0,"Mark Zuckerberg", "M", 3000000.00,LocalDate.now()),
+                new EmployeePayrollData(0,"Sunder", "M", 6000000.00,LocalDate.now()),
+                new EmployeePayrollData(0,"Mukesh", "M", 1000000.00,LocalDate.now()),
+                new EmployeePayrollData(0,"Anil", "M", 2000000.00,LocalDate.now())
+        };
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        employeePayrollService.readEmployeePayrollData(DB_IO);
+        Instant start = Instant.now();//Java8
+        employeePayrollService.addEmployeesToPayroll(Arrays.asList(arrayOfEmps));
+        Instant end = Instant.now();
+        System.out.println("Duration without Thread = "+ Duration.between(start, end));
+        Assertions.assertEquals(7,employeePayrollService.countEntries(DB_IO));
+    }
 }
-

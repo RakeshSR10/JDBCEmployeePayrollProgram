@@ -4,6 +4,7 @@ import java.time.LocalDate;
 public class EmployeePayrollData {
     public int id;
     public String name;
+    public String gender;
     public double salary;
     public LocalDate startDate;
 
@@ -17,6 +18,12 @@ public class EmployeePayrollData {
         this(id,name,salary);
         this.startDate = startDate;
     }
+
+    public EmployeePayrollData(int id, String name, String gender, double salary, LocalDate startDate) {
+        this(id,name,salary,startDate);
+        this.gender = gender;
+    }
+
     @Override
     public String toString(){
         return "Emp ID:"+id+", Emp name:"+name+", Salary:"+salary;

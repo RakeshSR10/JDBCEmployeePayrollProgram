@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class EmployeePayrollDBService {
     private PreparedStatement employeePayrollDataStatement;
-    private static EmployeePayrollDBService employeePayrollDBService;//Singleton
+    private static EmployeePayrollDBService employeePayrollDBService;// UC4 Singleton
     //constructor
     private EmployeePayrollDBService(){
     }
@@ -118,7 +118,7 @@ public class EmployeePayrollDBService {
     }
 
     //UC7 Add New Employee
-    public EmployeePayrollData addEmployeeToPayroll7(String name, double salary, LocalDate startDate, String gender) {
+    public EmployeePayrollData addEmployeeToPayrollUC7(String name, double salary, LocalDate startDate, String gender) {
         int employeeId = -1;
         EmployeePayrollData employeePayrollData = null;
         String sql = String.format("INSERT INTO employee_payroll (name, gender, salary, start)" +
@@ -136,7 +136,7 @@ public class EmployeePayrollDBService {
         }
         return employeePayrollData;
     }
-    //UC 8
+    //UC 8 update 2 tables in one attempt
     public EmployeePayrollData addEmployeeToPayroll(String name, double salary,
                                                     LocalDate startDate, String gender) {
         int employeeId = -1;
@@ -165,7 +165,7 @@ public class EmployeePayrollDBService {
             double tax = taxablePay * 0.1;
             double netPay = salary - tax;
             String sql = String.format("INSERT INTO payroll_details " +
-                                       "(employee_id, basic_pay, deductions, taxable_pay, tax, netPay) VALUES" +
+                                       "(employee_id, basic_pay, deductions, taxable_pay, tax, net_pay) VALUES" +
                                        "(%s, %s, %s, %s, %s, %s)",employeeId, salary,deductions, taxablePay, tax, netPay);
             int rowAffected = statement.executeUpdate(sql);
             if(rowAffected == 1) {
@@ -188,6 +188,4 @@ public class EmployeePayrollDBService {
         }
         return employeePayrollData;
     }
-
 }
-
