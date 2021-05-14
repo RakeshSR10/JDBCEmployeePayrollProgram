@@ -1,5 +1,6 @@
 package com.bridgeLabz;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class EmployeePayrollData {
     public int id;
@@ -27,6 +28,12 @@ public class EmployeePayrollData {
     @Override
     public String toString(){
         return "Emp ID:"+id+", Emp name:"+name+", Salary:"+salary;
+    }
+
+    //unique object id
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, gender, salary, startDate);
     }
 
     @Override
